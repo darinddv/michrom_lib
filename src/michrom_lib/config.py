@@ -52,7 +52,8 @@ class SimulationConfig:
 
     # ---- Replicas ----
     n_replicas: int = 1
-    seed_base: int = 1000
+    #seed_base: int = 1000
 
     def to_dict(self):
         return asdict(self)
+
