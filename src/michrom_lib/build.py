@@ -1,7 +1,8 @@
 from OpenMiChroM.ChromDynamics import MiChroM
 
 
-def build_simulation(config, chromseq_path, seed: int):
+def build_simulation(config, chromseq_path, #seed: int
+                    ):
     """
     Build MiChroM object and add forces.
     Does NOT run simulation.
@@ -16,7 +17,7 @@ def build_simulation(config, chromseq_path, seed: int):
         platform=config.platform,
         precision=config.precision,
         integrator=config.integrator,
-        seed=seed
+        #seed=seed
     )
 
     # Create initial structure
@@ -42,3 +43,4 @@ def build_simulation(config, chromseq_path, seed: int):
     )
 
     return sim
+
