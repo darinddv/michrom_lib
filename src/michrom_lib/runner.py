@@ -18,9 +18,12 @@ def run_replica(base_dir: str, config, replica_id: int):
         config.default_type
     )
 
-    seed = config.seed_base + replica_id
+    #seed = config.seed_base + replica_id
 
-    sim = build_simulation(config, chromseq_path, seed)
+    sim = build_simulation(config, 
+                           chromseq_path, 
+                           #seed
+                          )
 
     sim.saveFolder(rep_dir)
 
@@ -51,3 +54,4 @@ def run_replica(base_dir: str, config, replica_id: int):
         sim.run(config.prod_block)
 
     return rep_dir
+
